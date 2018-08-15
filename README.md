@@ -1,1 +1,1 @@
-# effective_devops_with_aws__second_edition
+# Effective DevOps with AWS second edition
