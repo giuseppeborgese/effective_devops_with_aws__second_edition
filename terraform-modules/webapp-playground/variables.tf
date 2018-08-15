@@ -1,9 +1,6 @@
-variable "subnet_public_A" {  default = "subnet-a94cabf4" }
-variable "subnet_public_B" {  default = "subnet-54840730" }
-variable "subnet_private" { default = "subnet-54840730"}
-variable "vpc_id" { default = "vpc-3901d841"}
-variable "my_ami" {
-  default = "ami-b70554c8"
-  description = "Amazon Linux 2 AMI (HVM), SSD Volume Type"
-}
-variable "pem_key_name" {  default = "effectivedeops" }
+variable "subnet_public_A" {}
+variable "subnet_public_B" {}
+variable "subnet_private" {}
+variable "vpc_id" {}
+variable "my_ami" {}
+variable "pem_key_name" {}
