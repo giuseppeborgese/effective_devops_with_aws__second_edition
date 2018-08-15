@@ -3,7 +3,7 @@ resource "aws_alb" "playground" {
   name            = "playground"
   internal        = false
   security_groups = ["${aws_security_group.alb_playground.id}"]
-  subnets         = ["${var.subnet_public}"]
+  subnets         = ["${var.subnet_public_A}","${var.subnet_public_B}"]
 
   tags {
     Name        = "playground ALB"
