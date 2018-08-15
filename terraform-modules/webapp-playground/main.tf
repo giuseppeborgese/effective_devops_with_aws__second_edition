@@ -94,10 +94,19 @@ resource "aws_security_group_rule" "surf_the_internet2" {
 }
 
 resource "aws_instance" "playground" {
-    ami                         = "${var.my_ami}"
-    instance_type               = "t2.micro"
-    key_name                    = "${var.pem_key_name}"
-    subnet_id                   = "${var.subnet_private}"
+    ami             = "${var.my_ami}"
+    instance_type   = "t2.micro"
+    key_name        = "${var.pem_key_name}"
+    subnet_id       = "${var.subnet_private}"
+    security_groups = ["${aws_security_group.ec2_playground.id}"]
+    user_data       = <<EOF
+#!/bin/bash
+yum install httpd -y
+echo "This is a playground main directory" > /var/www/html/index.html
+mkdir -p /var/www/html/subdir
+echo "This is a sub directory" > /var/www/html/subdir/index.html
+service httpd start
+EOF
 }
 
 # Attach the proxy instances
