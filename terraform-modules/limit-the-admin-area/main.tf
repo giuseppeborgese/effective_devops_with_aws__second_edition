@@ -23,8 +23,8 @@ resource "aws_wafregional_byte_match_set" "startrule" {
 }
 
 resource "aws_wafregional_rule" "wafrule" {
-  name        = "admin_rule"
-  metric_name = "admin_rule"
+  name        = "adminrule"
+  metric_name = "adminrule"
 
   predicate {
     type    = "IPMatch"
