@@ -40,8 +40,8 @@ resource "aws_wafregional_rule" "wafrule" {
 }
 
 resource "aws_wafregional_web_acl" "waf_acl" {
-  name        = "admin_protection"
-  metric_name = "admin_protection"
+  name        = "adminprotection"
+  metric_name = "adminprotection"
 
   default_action {
     type = "ALLOW"
