@@ -110,7 +110,7 @@ EOF
 }
 
 # Attach the proxy instances
-resource "aws_alb_target_group_attachment" "playground" {
+resource "aws_lb_target_group_attachment" "playground" {
   target_group_arn = "${aws_alb_target_group.playground.arn}"
   target_id        = "${aws_instance.playground.id}"
   port             = 80
