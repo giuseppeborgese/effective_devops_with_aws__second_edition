@@ -21,7 +21,7 @@ resource "aws_wafregional_rate_based_rule" "wafrule" {
   rate_key   = "IP"
   rate_limit = "${var.limit}"
 
-  predicates {
+  predicate {
     data_id = "${aws_wafregional_byte_match_set.startrule.id}"
     negated = false
     type    = "ByteMatch"
@@ -37,7 +37,7 @@ resource "aws_wafregional_web_acl" "waf_acl" {
     type = "ALLOW"
   }
 
-  rules {
+  rule {
     action {
       type = "BLOCK"
     }
@@ -48,9 +48,8 @@ resource "aws_wafregional_web_acl" "waf_acl" {
   }
 
 }
-/*
+
 resource "aws_wafregional_web_acl_association" "my_alb" {
   resource_arn = "${var.alb_arn}"
   web_acl_id = "${aws_wafregional_web_acl.waf_acl.id}"
 }
-*/
