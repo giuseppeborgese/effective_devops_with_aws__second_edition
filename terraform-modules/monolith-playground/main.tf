@@ -3,7 +3,7 @@ resource "aws_instance" "playground" {
   instance_type = "t2.micro"
   user_data = <<EOF
 #!/bin/bash
-yum -y install httpd mariadb.x86_64 mariadb-server
+yum -y install httpd mariadb.x86_64 mariadb-server java
 echo "<VirtualHost *>" > /etc/httpd/conf.d/tomcat-proxy.conf
 echo "        ProxyPass               /visits      http://localhost:8080/visits" >> /etc/httpd/conf.d/tomcat-proxy.conf
 echo "        ProxyPassReverse       /visits      http://localhost:8080/visits" >> /etc/httpd/conf.d/tomcat-proxy.conf
