@@ -1,5 +1,5 @@
 resource "aws_instance" "playground" {
-  ami           = "ami-04681a1dbd79675a5"
+  ami           = "${var.my_ami_id}"
   instance_type = "t2.micro"
   user_data = <<EOF
 #!/bin/bash
@@ -23,6 +23,7 @@ bash /etc/rc.d/rc.local
 EOF
   vpc_security_group_ids = ["${aws_security_group.playground.id}"]
   subnet_id = "${var.my_subnet}"
+  key_name  = "${var.my_pem_keyname}"
   tags {
     Name = "Monolith Playground"
   }
@@ -52,4 +53,9 @@ resource "aws_security_group" "playground" {
     protocol        = "-1"
     cidr_blocks     = ["0.0.0.0/0"]
   }
+}
+
+resource "aws_eip" "playground" {
+  vpc      = true
+  instance = "${aws_instance.playground.id}"
 }
