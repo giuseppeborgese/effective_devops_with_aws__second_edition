@@ -11,7 +11,7 @@ echo "</VirtualHost>" >> /etc/httpd/conf.d/tomcat-proxy.conf
 systemctl start mariadb
 chkconfig httpd on
 chkconfig mariadb on
-service httpd restart
+systemctl restart httpd
 mysql -u root -e "create database demodb;"
 mysql -u root -e "CREATE TABLE visits (id bigint(20) NOT NULL AUTO_INCREMENT, count bigint(20) NOT NULL, version bigint(20) NOT NULL, PRIMARY KEY (id)) ENGINE=InnoDB DEFAULT CHARSET=latin1;" demodb
 mysql -u root -e "INSERT INTO demodb.visits (count) values (0) ;"

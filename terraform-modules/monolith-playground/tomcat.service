@@ -5,7 +5,7 @@ ConditionPathExists=/home/ec2-user/tomcat.sh
 [Service]
 Type=forking
 ExecStart=/home/ec2-user/tomcat.sh start
-ExecStop=/home/ec2-user/tomcat.sh stop
+ExecStop=pkill java
 TimeoutSec=0
 StandardOutput=tty
 RemainAfterExit=yes
