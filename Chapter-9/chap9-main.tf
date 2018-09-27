@@ -9,7 +9,7 @@ module "webapp-playground" {
   subnet_private  = "subnet-54840730"
   vpc_id          = "vpc-3901d841"
   my_ami          = "ami-b70554c8"
-  pem_key_name    = "effectivedeops"
+  pem_key_name    = "effectivedevops"
 }
 
 module "limit_admin_WAF" {
