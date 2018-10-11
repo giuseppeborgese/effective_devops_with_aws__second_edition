@@ -7,7 +7,7 @@ This is the code repository for [Effective DevOps with AWS Second Edition](https
 **Implement continuous delivery and integration in the AWS environment**
 
 ## What is this book about?
-AWS provides a huge range of managed services. While each is well documented, figuring out how to use them together to build a business infrastructure is less clear. In this book, you’ll see how the most successful tech start-ups launch and scale their services on AWS and how you can too.
+AWS provides a huge range of managed services. While each is well documented, figuring out how to use them together to build a business infrastructure is less clear. In this book, youâ€™ll see how the most successful tech start-ups launch and scale their services on AWS and how you can too.
 
 This book covers the following exciting features:
 * Implement automatic AWS instance provisioning using CloudFormation
@@ -61,7 +61,7 @@ is a certified DevOps and cloud expert with a decade of IT experience. He has ex
 is currently working as a DevOps AWS Specialist for Siemens. He possesses a master's degree in Internet Technology and is a certified AWS DevOps Engineer Professional holding 4 certifications. His contributions to the AWS community include a Youtube channel featuring a series of AWS Tutorials and numerous articles for renowned blogs such as LinuxAcademy. He also holds VMware and Cisco certifications. This is his second book and the first book published with Packt. In this book, the chapters, Scaling Your Infrastructure and Hardening the Security of Your AWS Environment have been contributed by him.
 
 **Nathaniel Felsen**
- is a DevOps engineer who started working on DevOps engineering concepts over 10 years ago, before the term was even coined. He worked in several companies ranging from small start-ups to enterprises, including Qualys, Square, and more recently, Medium. Outside of work, Nathaniel lives a fabulous life where he enjoys running after his very active kids and spending a fortune on occasional date nights with his wife. Although Nathaniel is French, he prefers exploring local stout beers with friends than drinking wine. He holds a MS degree in system, network, and security from Ecole Pour l'Informatique et les Techniques Avancées (EPITA), a top CS engineering school in France.
+ is a DevOps engineer who started working on DevOps engineering concepts over 10 years ago, before the term was even coined. He worked in several companies ranging from small start-ups to enterprises, including Qualys, Square, and more recently, Medium. Outside of work, Nathaniel lives a fabulous life where he enjoys running after his very active kids and spending a fortune on occasional date nights with his wife. Although Nathaniel is French, he prefers exploring local stout beers with friends than drinking wine. He holds a MS degree in system, network, and security from Ecole Pour l'Informatique et les Techniques AvancÃ©es (EPITA), a top CS engineering school in France.
 
 # Other book by the author
 * [Effective DevOps with AWS](https://www.packtpub.com/application-development/effective-devops-aws?utm_source=github&utm_medium=repository&utm_campaign=9781786466815)
