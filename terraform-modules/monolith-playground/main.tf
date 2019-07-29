@@ -27,7 +27,7 @@ EOF
   vpc_security_group_ids = ["${aws_security_group.playground.id}"]
   subnet_id = "${var.my_subnet}"
   key_name  = "${var.my_pem_keyname}"
-  tags {
+  tags = {
     Name = "Monolith Playground"
   }
 }
