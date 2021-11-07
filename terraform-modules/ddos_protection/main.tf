@@ -1,7 +1,7 @@
 resource "aws_wafregional_byte_match_set" "startrule" {
   name  = "${var.url}"
 
-  byte_match_tuples = [
+  byte_match_tuples [
     {
       field_to_match = {
         type = "URI"
