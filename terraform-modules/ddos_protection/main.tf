@@ -1,17 +1,15 @@
 resource "aws_wafregional_byte_match_set" "startrule" {
   name  = "${var.url}"
 
-  byte_match_tuples [
-    {
-      field_to_match = {
+  byte_match_tuples {
+      field_to_match {
         type = "URI"
       }
 
       text_transformation   = "LOWERCASE"
       target_string         = "/${var.url}"
       positional_constraint = "STARTS_WITH"
-    },
-  ]
+    }
 }
 
 resource "aws_wafregional_rate_based_rule" "wafrule" {
